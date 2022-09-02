@@ -35,11 +35,11 @@ private DataBase dataBase = DataBase.getInstance();
         setContentView(R.layout.activity_main);
         initViews();
         notesAdapter = new NotesAdapter();
-        notesAdapter.setOnNoteClickListener(new NotesAdapter.OnNoteClickListener() {//!!!
+        notesAdapter.setOnNoteClickListener(new NotesAdapter.OnNoteClickListener() {//6
             @Override
-            public void onNoteClick(Note note) {
-            dataBase.removeNote(note.getId());
-            showNotes();//!!!
+            public void onNoteClick(Note note) {//!!
+            dataBase.removeNote(note.getId());//7
+            showNotes();//8
             }
         });
 
